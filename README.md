@@ -1,18 +1,29 @@
-### Hi there 👋
-im firas
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js"></script>
 
-
-<!--
-**qurancloud/qurancloud** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+      
+      <table id="jsonTable">
+        <thead>
+          <tr>
+           
+            <th>Profile Name</th>
+            <th>Profile Image</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      
+      
+      
+</body>
+</html>
