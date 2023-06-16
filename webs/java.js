@@ -4,7 +4,7 @@ function handleClick(username) {
   }
  
  // Fetch the external JSON file
- fetch('https://firebasestorage.googleapis.com/v0/b/myweb-a5314.appspot.com/o/qurancloud%2Fdata.json?alt=media&token=ace48711-bc68-4921-94c2-79f24606eb35')
+ fetch('data.json')
  .then((response) => response.json())
  .then((data) => {
    const tableBody = document.querySelector('#jsonTable tbody');
