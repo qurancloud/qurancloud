@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile Details</title>
+  <style>
+    /* Add your custom CSS styling for the second page here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .profile-container {
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-image {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .profile-name {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .username {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+    
+  <div class="profile-container">
+   <h1 class="profileTitle"></h1>
+
+    <div id="profileImageContainer">
+      <img id="profileImage" class="profile-image" src="" alt="Profile Image">
+    </div>
+
+    <div id="profileDetails">
+     
+      <p class="profile-name"></p>
+      <p class="enName"></p>
+    </div>
+  </div>
+
+  <script>
+    // Function to retrieve the query parameter value from the URL
+    function getQueryParameterValue(parameter) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(parameter);
+    }
+
+    // Retrieve the username from the query parameter
+    const username = getQueryParameterValue('username');
+
+    // Update the profile details based on the username
+    const profileNameElement = document.querySelector('.profile-name');
+    const usernameElement = document.querySelector('.enName');
+    const profileImageElement = document.getElementById('profileImage');
+    const profileTitle = document.querySelector('.profileTitle');
+
+    // Retrieve the data.json file
+    fetch('data.json')
+      .then((response) => response.json())
+      .then((data) => {
+        // Check if the username exists in the data
+        if (data.hasOwnProperty(username)) {
+          const profileData = data[username];
+          const { profileName, profileImage , enName } = profileData;
+
+          // Set the profile name and username
+          profileNameElement.textContent = 'Name: ' + enName;
+          usernameElement.textContent = 'Arabic Name: ' + profileName;
+          profileTitle.textContent =enName;
+
+          // Set the profile image source
+          profileImageElement.src = profileImage;
+        }
+      })
+      .catch((error) => {
+        console.log('Error:', error);
+      });
+  </script>
+</body>
+</html>
