@@ -4,7 +4,7 @@ function handleClick(username) {
   }
  
  // Fetch the external JSON file
- fetch('data.json')
+ fetch('https://raw.githubusercontent.com/qurancloud/qurancloud/65f73491b6a8079771b3481499eeb5f6c8c98c64/webs/data.json')
  .then((response) => response.json())
  .then((data) => {
    const tableBody = document.querySelector('#jsonTable tbody');
