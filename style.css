@@ -1,0 +1,35 @@
+#jsonTable {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  #jsonTable th,
+  #jsonTable td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  #jsonTable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+
+  #jsonTable img {
+    max-width: 50px;
+    height: auto;
+  }
+  
+  table tbody tr:hover{
+    background-color: rgb(206, 206, 206);
+    scale: 1.1;
+  }
+
+  table tbody tr:hover{
+    background-color: rgb(206, 206, 206);
+    scale: 1;
+  }
+
+  #jsonTable img:hover {
+    transform: scale(2.5);
+  }
